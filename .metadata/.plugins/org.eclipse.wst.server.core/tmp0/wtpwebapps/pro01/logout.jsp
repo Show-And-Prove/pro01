@@ -2,7 +2,7 @@
     pageEncoding="UTF-8"%>
 
 <%
-	session.removeAttribute("id");
+	session.removeAttribute("name");
 	String cPath = request.getContextPath();
 	response.sendRedirect(cPath+"/index.jsp");
 
