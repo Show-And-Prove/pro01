@@ -18,3 +18,20 @@ select * from membera;
 insert into membera values('guest','guest','GUEST','@naver.com','010-1122-3344',SYSDATE);
 
 INSERT INTO membera VALUES('test','test','test','test@test.com','010-0101-0101',SYSDATE);
+
+
+
+
+
+
+
+
+
+SELECT * FROM MEMBERA;
+
+
+
+
+
+
+

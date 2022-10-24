@@ -17,7 +17,7 @@
                 }else {
 				%>
 					<a href="login.jsp">로그인</a>
-                    <a href="join.jsp">회원가입</a>
+                    <a href="term.jsp">회원가입</a>
                     <a href="sitemap.jsp">사이트맵</a>
                 <%
                 }
