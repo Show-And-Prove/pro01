@@ -30,6 +30,9 @@ INSERT INTO membera VALUES('test','test','test','test@test.com','010-0101-0101',
 SELECT * FROM MEMBERA;
 
 
+select * from boarda;
+
+
 
 
 

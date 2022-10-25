@@ -223,3 +223,12 @@ This warning can be switched off on the Team > Git > Confirmations and Warnings 
 
 !ENTRY org.eclipse.ui 4 4 2022-10-25 14:54:42.392
 !MESSAGE Conflicting handlers for org.eclipse.ui.file.print: {ActionHandler(org.eclipse.ui.texteditor.AbstractDecoratedTextEditor$12@1ae9cfca)} vs {ActionHandler(org.eclipse.ui.texteditor.TextOperationAction@5e47e1f)}
+
+!ENTRY org.eclipse.ui 4 4 2022-10-25 15:06:18.560
+!MESSAGE Conflicting handlers for org.eclipse.ui.file.print: {ActionHandler(org.eclipse.ui.texteditor.AbstractDecoratedTextEditor$12@1ae9cfca)} vs {ActionHandler(org.eclipse.ui.texteditor.TextOperationAction@5e47e1f)}
+
+!ENTRY org.eclipse.ui 4 4 2022-10-25 15:06:27.055
+!MESSAGE Conflicting handlers for org.eclipse.ui.file.print: {ActionHandler(org.eclipse.ui.texteditor.AbstractDecoratedTextEditor$12@1ae9cfca)} vs {ActionHandler(org.eclipse.ui.texteditor.TextOperationAction@5e47e1f)}
+
+!ENTRY org.eclipse.ui 4 4 2022-10-25 15:06:44.039
+!MESSAGE Conflicting handlers for org.eclipse.ui.file.print: {ActionHandler(org.eclipse.ui.texteditor.AbstractDecoratedTextEditor$12@1ae9cfca)} vs {ActionHandler(org.eclipse.ui.texteditor.TextOperationAction@5e47e1f)}
