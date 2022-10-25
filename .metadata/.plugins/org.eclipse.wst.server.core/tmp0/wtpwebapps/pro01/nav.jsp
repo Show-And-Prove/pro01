@@ -2,26 +2,37 @@
     pageEncoding="UTF-8"%>
 <%
 	String name = (String) session.getAttribute("name");
+	String id = (String) session.getAttribute("id");
+	
 %>
 	<div class="hd_wrap">
                 <a href="index.jsp" class="logo"><img src="./pic2/upbit_logo.png" alt="Upbit_logo"></a>
                 <nav class="tnb">
 				<%
-				if(name!=null){
+				if(id != null && id.equals("admin")){
 				%>	
                     <span class="name_print"><%=name %>님</span>
+                    <a href="memList.jsp">회원관리</a>
                     <a href="logout.jsp">로그아웃</a>
                     <a href="join.jsp">내정보</a>
                     <a href="sitemap.jsp">사이트맵</a>
                 <% 
-                }else {
+                }else if(name != null){
 				%>
-					<a href="login.jsp">로그인</a>
+					<span class="name_print"><%=name %>님</span>
+                    <a href="logout.jsp">로그아웃</a>
+                    <a href="join.jsp">내정보</a>
+                    <a href="sitemap.jsp">사이트맵</a>
+					
+                <%
+                }else{
+                %>
+                    <a href="login.jsp">로그인</a>
                     <a href="term.jsp">회원가입</a>
                     <a href="sitemap.jsp">사이트맵</a>
-                <%
+                <% 
                 }
-                %>
+				%>
                 </nav>
                 <nav class="gnb">
                     <ul>
