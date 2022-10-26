@@ -6,12 +6,15 @@
 	response.setCharacterEncoding("UTF-8");
 	response.setContentType("text/html; charset=UTF-8");
 	
+	String sid = (String) session.getAttribute("id");
+
+	
 	int no = Integer.parseInt(request.getParameter("no"));
 	String title = "";
 	String content = "";
-	String author = "";
+	String uname = "";
 	String resdate = "";
-	String uid = request.getParameter("author");
+	String author = "";
 	
 	
 	Connection con = null;
@@ -26,19 +29,20 @@
 	try {
 		Class.forName("oracle.jdbc.OracleDriver");
 		con = DriverManager.getConnection(url, dbid, dbpw);
-		sql = "select * from BOARDA where no=?";
+		sql = "select a.no no, a.title title, a.content content, ";
+		sql = sql + "b.name name, a.resdate resdate, a.author author ";
+		sql = sql + "from boarda a inner join membera b ";
+		sql = sql + "on a.author=b.id where a.no=?";
 		pstmt = con.prepareStatement(sql);
 		pstmt.setInt(1, no);
-		//select된 데이터가 없으면, rs=null이 됨
 		rs = pstmt.executeQuery();
-		//int cnt = pstmt.executeUpdate();
 		
-		if(rs.next()){
-			no = rs.getInt("no");
+		if(rs.next()){	///
 			title = rs.getString("title");
 			content = rs.getString("content");
-			author = rs.getString("author");
+			uname = rs.getString("name");
 			resdate = rs.getString("resdate");
+			author = rs.getString("author");
 		}
 	} catch(Exception e){
 		e.printStackTrace();
@@ -98,12 +102,12 @@
         </div>
         <section class="page">
             <div class="page_wrap">
-                <h2 class="page_title">글목록</h2>
+                 <h2 class="page_title">글 상세보기</h2>
   				<div class="tb_fr">
   					<table class="tb">
   						<tbody>             
 							<tr>
-								<th>글번호</th>
+								<th>글 번호</th>
 								<td><%=no %></td>
 							</tr>
 							<tr>
@@ -116,7 +120,7 @@
 							</tr>
 							<tr>
 								<th>작성자</th>
-								<td><%=author %></td>
+								<td><%=uname %></td>
 							</tr>
 							<tr>
 								<th>작성일</th>
@@ -124,18 +128,15 @@
 							</tr>
 						</tbody> 
 					</table>
-					<a href="board.jsp">글 목록</a>
-					<!--  -->
-					<%
-						if(id.equals("admin") || author==id){
-					%>
-					
-					<a href='boardModify.jsp?no=<%=rs.getInt("no")%>'>수정</a>
-					<a href='boardDelete.jsp?no=<%=rs.getInt("no")%>'>삭제</a>
-					<%
-						}
-					%>
-					<!--  -->
+					<div class="btn_group">
+						<a href="boardList.jsp" class="btn primary">게시판 목록</a>
+						<%
+							if(sid.equals("admin") || sid.equals(author)) {
+						%>
+						<a href='boardModify.jsp?no=<%=no %>' class="btn primary">글 수정</a>
+						<a href='boardDelete.jsp?no=<%=no %>' class="btn primary">글 삭제</a>
+						<% } %>
+					</div>
 				</div>
 			</div>
         </section>
