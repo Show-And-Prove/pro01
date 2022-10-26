@@ -80,6 +80,7 @@
 	.tb tr th:nth-child(2) { width:160px; text-align:center; }
 	.tb tr th:nth-child(3) { width:160px; text-align:center; }
 	.tb tr th:last-child { text-align:center; }
+	
     </style>
     <link rel="stylesheet" href="footer.css">
 </head>

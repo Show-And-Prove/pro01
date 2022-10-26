@@ -58,6 +58,10 @@
 	.tb tr th:nth-child(3) { width:160px; text-align:center; }
 	.tb tr th:last-child { text-align:center; }
     </style>
+    <!-- dataTables -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.12.1/datatables.min.css"/>
+	<script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.12.1/datatables.min.js"></script>
+	<!-- dataTables -->
     <link rel="stylesheet" href="footer.css">
 </head>
 <body>
@@ -79,7 +83,7 @@
             <div class="page_wrap">
                 <h2 class="page_title">게시판</h2>
   				<div class="tb_fr">
-  					<table class="tb">
+  					<table class="tb" id="auto">
   						<thead>
   							<tr>
   								<th>글번호</th>
@@ -101,7 +105,7 @@
 					<%
 					if(sid!=null) {
 					%>
-						<td><a href='boardContext.jsp?no=<%=rs.getInt("no") %>'><%=rs.getString("title") %></a></td>
+						<td><a href='boardDetail.jsp?no=<%=rs.getInt("no") %>'><%=rs.getString("title") %></a></td>
 					<%
 					} else {
 					%>
@@ -142,5 +146,12 @@
 		<%@ include file="footer.jsp" %>
     </footer>
 </div>
+<!-- dataTables -->
+<script type="text/javascript">
+jQuery(function($){ 
+	$("#auto").DataTable(); 
+}); 
+</script>
+<!-- dataTables -->
 </body>
 </html>
