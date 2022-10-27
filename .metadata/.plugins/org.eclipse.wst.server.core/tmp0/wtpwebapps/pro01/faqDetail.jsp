@@ -98,6 +98,7 @@
 						<%
 							if(sid.equals("admin")) {
 						%>
+						<a href='faqWrite.jsp?no=<%=no %>' class="btn primary">답변 작성</a>
 						<a href='faqModify.jsp?no=<%=no %>' class="btn primary">답변 수정</a>
 						<a href='faqDelete.jsp?no=<%=no %>' class="btn primary">답변 삭제</a>
 						<% } %>

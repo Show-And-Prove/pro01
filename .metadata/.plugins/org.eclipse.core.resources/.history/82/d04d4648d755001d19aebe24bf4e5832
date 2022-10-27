@@ -137,7 +137,7 @@
 						<%
 						if(sid.equals("admin")) {
 						%>
-						<a href="faqWrite.jsp" class="btn primary">답변 쓰기</a>
+						<a href="faqWrite.jsp" class="btn primary">글 쓰기</a>
 						<%
 						}
 						%>

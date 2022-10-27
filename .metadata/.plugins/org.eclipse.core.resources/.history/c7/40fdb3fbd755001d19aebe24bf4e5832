@@ -21,7 +21,7 @@
 	try {
 		Class.forName("oracle.jdbc.OracleDriver");
 		con = DriverManager.getConnection(url, dbid, dbpw);
-		sql = "insert into faqa values(f_seq.nextval, ?, ?, 'admin', sysdate, 1, ?)";
+		sql = "insert into faqa values(f_seq, ?, ?, 'admin', sysdate, 1, f_seq.currval)";
 		pstmt = con.prepareStatement(sql);
 		pstmt.setString(1, title);
 		pstmt.setString(2, content);

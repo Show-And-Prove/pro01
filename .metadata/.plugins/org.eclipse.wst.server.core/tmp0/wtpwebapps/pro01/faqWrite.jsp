@@ -78,6 +78,10 @@
 									</td>
 								</tr>
 								<tr>
+									<th>답변 할 질문 번호</th>
+									<td><input type="number" name="parno" id="parno" class="in_data" required /></td>
+								</tr>
+								<tr>
 									<th>작성자</th>
 									<td>
 										관리자

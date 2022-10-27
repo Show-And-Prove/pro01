@@ -104,7 +104,7 @@
 					<%
 					if(rs.getInt("gubun")==1) {
 					%>
-						<td><a href='faqDetail.jsp?no=<%=rs.getInt("no") %>' style = 'padding-left : 30px';><%=rs.getString("title") %></a></td>
+						<td><a href='faqDetail.jsp?no=<%=rs.getInt("no") %>' style = 'padding-left : 30px'><%=rs.getString("title") %></a></td>
 					<%
 					} else {
 					%>
@@ -137,7 +137,7 @@
 						<%
 						if(sid.equals("admin")) {
 						%>
-						<a href="faqWrite.jsp" class="btn primary">글 쓰기</a>
+						<a href="faqWrite.jsp" class="btn primary">답변 쓰기</a>
 						<%
 						}
 						%>
