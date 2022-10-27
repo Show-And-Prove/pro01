@@ -11,3 +11,10 @@ select count(*) cntboard from boarda;
 -- 글 상세보기
 select a.no no, a.title tit, a.content con, b.name name, a.resdate res from boarda a inner join membera b on a.author=b.id where a.no=1;
 
+
+select * from boarda;
+
+delete from boarda where no=15;
+
+delete from boarda where no=16;
+

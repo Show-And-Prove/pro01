@@ -35,12 +35,12 @@
     .tb tr:first-child td { border-top:2px solid #333; }
     .tb tr:last-child th { border-bottom:2px solid #333; }
     .tb tr:last-child td { border-bottom:2px solid #333; }
-	.btn_group { clear:both; width:580px; margin:20px auto; }
+	.btn_group { clear:both; width:580px; margin:20px auto;  }
 	.btn_group .btn { display:block; float:left; margin:20px; min-width:100px; padding:8px; font-size:14px;
 	line-height:24px; border-radius:36px; border:2px solid #333; text-align:center; }
 	.btn_group .btn.primary { background-color:#333; color:#fff; }
 	.btn_group .btn.primary:hover { background-color:deepskyblue; }
-	.in_data { display:block; float:left; line-height:36px; padding-left:6px; }
+	.in_data { display:block; float:left; width:723px; line-height:36px; padding-left:6px; background-color:#fff; color:#333;}
 	textarea { padding:6px; }
     </style>
     <link rel="stylesheet" href="footer.css">
@@ -62,7 +62,7 @@
         </div>
         <section class="page">
             <div class="page_wrap">
-                <h2 class="page_title">글 쓰기</h2>
+                <h2 class="page_title">글 작성</h2>
   				<div class="frm1">
   					<form name="frm" action="boardWritePro.jsp" method="post" class="frm">
 	  					<table class="tb">
@@ -86,7 +86,7 @@
 							</tbody> 
 						</table>
 						<div class="btn_group">
-							<button type="submit" class="btn primary">글 쓰기</button>
+							<button type="submit" class="btn primary">글 작성</button>
 							<a href="board.jsp" class="btn primary">게시판 목록</a>
 						</div>
 					</form>

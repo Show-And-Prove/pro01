@@ -80,6 +80,8 @@
 	.tb tr th:nth-child(2) { width:160px; text-align:center; }
 	.tb tr th:nth-child(3) { width:160px; text-align:center; }
 	.tb tr th:last-child { text-align:center; }
+	.in_data { display:block; float:left; width:715px; line-height:27px; padding-left:6px; background-color:#fff; color:#333; }
+	
 	
     </style>
     <link rel="stylesheet" href="footer.css">

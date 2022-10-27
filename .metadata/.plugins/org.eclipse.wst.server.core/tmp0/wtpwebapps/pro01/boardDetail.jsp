@@ -27,7 +27,7 @@
     .tb td, .tb th { display:table-cell; }
     .tb th { height: 48px; border-bottom:2px solid #333; border-top:2px solid #333; 
     color:#fff; background-color:#333; }
-    .tb td { height: 48px; border-bottom:1px solid #333; text-align:center; }
+    .tb td { height: 48px; border-bottom:1px solid #333; text-align: center; }
 	.tb tr th:first-child { width:80px; text-align:center; }
 	.tb tr th:nth-child(2) { width:160px; text-align:center; }
 	.tb tr th:nth-child(3) { width:160px; text-align:center; }
@@ -37,8 +37,9 @@
 <title>글 상세보기</title>
 </head>
 <body>
-
+<!--  -->
 <%@ include file="connectionPool.conf"  %>
+<!--  -->
 <%
 	int no = Integer.parseInt(request.getParameter("no"));
 	String author = "";
@@ -50,6 +51,7 @@
 	if(rs.next()){
 		author = rs.getString("author");
 %>
+<!--  -->
 <div class="wrap">
     <header class="hd">
 		<%@ include file="nav.jsp" %>
@@ -97,7 +99,7 @@
 						<%
 							if(sid.equals("admin") || sid.equals(author)) {
 						%>
-						<a href='boardModify.jsp?no=<%=no %>' class="btn primary">글 수정</a>
+						<a href='boardModify0.jsp?no=<%=no %>' class="btn primary">글 수정</a>
 						<a href='boardDelete.jsp?no=<%=no %>' class="btn primary">글 삭제</a>
 						<% } %>
 					</div>
@@ -112,7 +114,7 @@
 <%
 	}
 %>
-	
+<!--  -->	
 <%@ include file="connectionClose.conf"  %>
 </body>
 </html>
