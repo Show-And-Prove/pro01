@@ -18,3 +18,7 @@ delete from boarda where no=15;
 
 delete from boarda where no=16;
 
+
+SELECT NO, TITLE, CONTENT FROM FAQA WHERE no=1;
+
+update faq set title='제가 산 코인만 안올라요', content='어쩌죠?' where no=1;
