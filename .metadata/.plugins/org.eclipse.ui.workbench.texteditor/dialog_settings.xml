@@ -9,20 +9,20 @@
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="boardList" key="selection"/>
+		<item value="parno" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
-			<item value="boardlist"/>
-			<item value="context"/>
-			<item value="sid"/>
-			<item value="cnt"/>
+			<item value="parno"/>
 			<item value="amount"/>
-			<item value="list"/>
-			<item value="figure"/>
-			<item value=".html"/>
+			<item value=".tb td"/>
+			<item value="tb.td"/>
+			<item value="btn"/>
+			<item value="in_"/>
+			<item value="title"/>
+			<item value="boardlist"/>
 		</list>
 		<list key="replacehistory">
 			<item value=".jsp"/>

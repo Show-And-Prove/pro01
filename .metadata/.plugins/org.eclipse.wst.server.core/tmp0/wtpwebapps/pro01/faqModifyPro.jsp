@@ -5,6 +5,8 @@
 	request.setCharacterEncoding("UTF-8");
 	response.setCharacterEncoding("UTF-8");
 	response.setContentType("text/html; charset=UTF-8");
+	
+	
 	int no = Integer.parseInt(request.getParameter("no"));
 	String title = request.getParameter("title");
 	String content = request.getParameter("content");
@@ -27,6 +29,7 @@
 		pstmt.setString(2, content);
 		pstmt.setInt(3, no);
 		cnt = pstmt.executeUpdate();
+		
 		if(cnt>0){
 			response.sendRedirect("faq.jsp");
 		} else {

@@ -65,7 +65,7 @@
                             <ul class="sub">
                                 <li><a href="custom.jsp#page1">공지사항</a></li>
                                 <li><a href="faq.jsp">자주하는질문</a></li>
-                                <li><a href="custom.jsp#page3">QnA</a></li>
+                                <li><a href="qna.jsp">QnA</a></li>
                             </ul>
                         </li>
                     </ul>

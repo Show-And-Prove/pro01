@@ -2,6 +2,7 @@
     pageEncoding="UTF-8"%>
 <%
 	String sid = (String) session.getAttribute("id");
+	String content = (String) session.getAttribute("content");
 %>
 <!DOCTYPE html>
 <html>
@@ -64,22 +65,24 @@
             <div class="page_wrap">
                 <h2 class="page_title">답변 작성</h2>
   				<div class="frm1">
-  					<form name="frm" action="faqAnswerWritePro.jsp" method="post" class="frm">
+  					<form name="frm" action="faqWritePro.jsp" method="post" class="frm">
 	  					<table class="tb">
 	  						<tbody>             
 								<tr>
-									<th>제목</th>
+									<th><label for="title">제목</label></th>
 									<td><input type="text" name="title" id="title" class="in_data" required /></td>
 								</tr>
 								<tr>
-									<th>내용</th>
+									<th><label for="content">질문 내용</label></th>
 									<td>
-										<textarea cols="100" rows="8" name="content" id="content"></textarea>
+										<textarea cols="100" rows="8" name="content" id="content" readonly><%=content %></textarea>
 									</td>
 								</tr>
 								<tr>
-									<th>답변 할 질문 번호</th>
-									<td><input type="number" name="parno" id="parno" class="in_data" required /></td>
+									<th><label for="content2">답변 내용</label></th>
+									<td>
+										<textarea cols="100" rows="8" name="content2" id="content2"></textarea>
+									</td>
 								</tr>
 								<tr>
 									<th>작성자</th>
