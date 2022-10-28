@@ -5,10 +5,10 @@
 
 ## 프로젝트 설계
 ![개념적 설계](./img/database/pro01_01.png "개념적 설계")
-![논리적 설계](./img/database/pro01_02.png "논리적 설계")
-![물리적 설계1](./img/database/pro01_03.png "물리적 설계1")
-![물리적 설계2](./img/database/pro01_04.png "물리적 설계2")
-![클래스 설계](./img/database/pro01_05.png "클래스 설계")
-![기능 설계](./img/database/pro01_06.png "기능 설계")
-![DB ERD](./img/database/pro01_07.png "DB ERD")
+![논리적 설계](./img/database/pro01_02.PNG "논리적 설계")
+![물리적 설계1](./img/database/pro01_03.PNG "물리적 설계1")
+![물리적 설계2](./img/database/pro01_04.PNG "물리적 설계2")
+![클래스 설계](./img/database/pro01_05.PNG "클래스 설계")
+![기능 설계](./img/database/pro01_06.PNG "기능 설계")
+![DB ERD](./img/database/pro01_07.PNG "DB ERD")
 ![회원가입 시퀀스](./img/database/pro01_08.png "회원가입 시퀀스")
