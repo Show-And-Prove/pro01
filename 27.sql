@@ -48,23 +48,23 @@ CREATE TABLE QNAA(
 
 COMMIT;
 
-CREATE SEQUENCE qnaseq;
+CREATE SEQUENCE qna_seq;
 DROP sequence qseq;
 
-INSERT INTO QNAA VALUES(qnaseq.NEXTVAL, '답변해주세요1', '빨리요', 'kkt', default, 0, qnaseq.CURRVAL, 'n');
-INSERT INTO QNAA VALUES(qnaseq.NEXTVAL, '답변해주세요2', '빨리요빨리요', 'guest', default, 0, qnaseq.CURRVAL, 'n');
-INSERT INTO QNAA VALUES(qnaseq.NEXTVAL, '답변해주세요3', '빨리요빨리요', 'test', default, 0, qnaseq.CURRVAL, 'n');
-INSERT INTO qnaa VALUES(qnaseq.NEXTVAL, 're)답변해주세요1', '답변1', 'admin', default, 1, qnaseq.currval, 'n');
-INSERT INTO qnaa VALUES(qnaseq.NEXTVAL, 're)답변해주세요2', '답변2', 'admin', default, 1, qnaseq.currval, 'n');
+INSERT INTO QNAA VALUES(qna_seq.NEXTVAL, '답변해주세요1', '빨리요', 'kkt', default, 0, qna_seq.CURRVAL, 'n');
+INSERT INTO QNAA VALUES(qna_seq.NEXTVAL, '답변해주세요2', '빨리요빨리요', 'guest', default, 0, qna_seq.CURRVAL, 'n');
+INSERT INTO QNAA VALUES(qna_seq.NEXTVAL, '답변해주세요3', '빨리요빨리요', 'test', default, 0, qna_seq.CURRVAL, 'n');
+INSERT INTO qnaa VALUES(qna_seq.NEXTVAL, 're)답변해주세요1', '답변1', 'admin', default, 1, qna_seq.currval, 'n');
+INSERT INTO qnaa VALUES(qna_seq.NEXTVAL, 're)답변해주세요2', '답변2', 'admin', default, 1, qna_seq.currval, 'n');
 
-INSERT INTO QNAA VALUES(qnaseq.NEXTVAL, '답변해주세요4', '빨리요', 'guest', default, 0, qnaseq.CURRVAL, 'y');
+INSERT INTO QNAA VALUES(qna_seq.NEXTVAL, '답변해주세요4', '빨리요', 'guest', default, 0, qna_seq.CURRVAL, 'y');
 
 
 select * from qnaa;
 
 drop table qnaa;
 
-
+rollback;
 
 
 

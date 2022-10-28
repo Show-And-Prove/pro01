@@ -2,8 +2,6 @@
     pageEncoding="UTF-8"%>
 <%
 	String author = (String) session.getAttribute("id");
-	String sec = (String)session.getAttribute("sec");
-	
 %>
 <!DOCTYPE html>
 <html>
@@ -65,7 +63,7 @@
        </div>
        <section class="page">
            <div class="page_wrap">
-               <h2 class="page_title">글 쓰기</h2>
+               <h2 class="page_title">질문 작성</h2>
 			<div class="frm1">
 				<form name="frm" class="frm" action="qnaQusetionWritePro.jsp" method="post">
 					<table class="tb">

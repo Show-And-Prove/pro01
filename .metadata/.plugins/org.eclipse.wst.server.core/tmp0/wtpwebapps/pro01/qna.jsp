@@ -8,10 +8,9 @@
 	
 	/* int parno = Integer.parseInt(request.getParameter("parno")); */
 	
-	String sid = (String)session.getAttribute("id");
-	String author = "";
-	//String sec = (String)session.getAttribute("sec");	//sec -> char
-
+	String sid = (String)session.getAttribute("author");
+	String sec = (String)session.getAttribute("sec");
+	String author = (String)session.getAttribute("author");
 	
 	Connection con = null;
 	PreparedStatement pstmt = null;
@@ -25,7 +24,7 @@
 	try {
 		Class.forName("oracle.jdbc.OracleDriver");
 		con = DriverManager.getConnection(url, dbid, dbpw);
-		sql = "SELECT * FROM QNAA ORDER BY PARNO ASC, LEV ASC";
+		sql = "SELECT * FROM qnaa ORDER BY PARNO ASC";
 		pstmt = con.prepareStatement(sql);
 		rs = pstmt.executeQuery();
 %>
@@ -101,27 +100,28 @@
 			cnt+=1;
 			SimpleDateFormat yymmdd = new SimpleDateFormat("yyyy-MM-dd");	//java.text.*
 			String date = yymmdd.format(rs.getDate("resdate"));
-			String sec = (String)session.getAttribute("sec");
+			author = rs.getString("author");
+			sec = rs.getString("sec");
 %>
 			<tr>
 					<td><%=cnt %></td>
 					<%
-					if(sec == "n"){	//비밀글이 아니면 링크노출 
+					if(sec.equals("y")) {
+						if(sid.equals("admin") || sid.equals(author)){
 					%>
-						<td><a href='qnaDetail.jsp?no=<%=rs.getInt("no") %>'><%=rs.getString("title") %></a></td>
+						<td><a href='qnaDetail.jsp?no=<%=rs.getInt("no") %>' ><%=rs.getString("title") %></a></td>
 					<%
-					} else if( sec=="y" && sid.equals("admin")  ) { //비밀글이면 admin과 작성자에게만 링크노출
+							} else {
 					%>
-						<td><a href='qnaDetail.jsp?no=<%=rs.getInt("no") %>'><%=rs.getString("title") %></a></td>
+						<td><%=rs.getString("title") %></td>
 					<%
-					} else if( sec=="y" && sid.equals(author)) {
-					%>	
-						<td><a href='qnaDetail.jsp?no=<%=rs.getInt("no") %>'><%=rs.getString("title") %></a></td>
-					<%
-					} else {
+							}
+					} else{
 					%>
-						<td><a href='qnaDetail.jsp?no=<%=rs.getInt("no") %>'><%=rs.getString("title") %></a></td>
-					<%} %>	
+					<td><a href='qnaDetail.jsp?no=<%=rs.getInt("no") %>' ><%=rs.getString("title") %></a></td>
+					<%
+					}
+					%>
 					<td><%=rs.getString("author") %></td>
 					<td><%=rs.getString("resdate") %></td>
 			</tr>
@@ -141,12 +141,13 @@
 						<%
 						if(sid.equals("admin")) {
 						%>
-						<a href="qnaAnswerWrite.jsp" class="btn primary">답변 쓰기</a>
+						<a href="qnaWrite.jsp" class="btn primary">답변 쓰기</a>
 						<%
-						} else {
+						}else{
 						%>
 						<a href="qnaQuestionWrite.jsp" class="btn primary">질문 작성</a>
-						<%} %>						
+						<%} %>
+						
 					</div>
 				</div>
 			</div>
