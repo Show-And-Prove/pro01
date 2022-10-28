@@ -1,5 +1,0 @@
-package com.wemedia.util;
-
-public class SMTPAuthenticatior extends Authenticator{
-
-}
